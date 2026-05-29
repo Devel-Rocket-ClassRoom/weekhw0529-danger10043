@@ -1,8 +1,8 @@
 #include "Homework02.h"
 #include <iostream>
 #include <string>
-
-std::string cardList[52];
+#include <stdio.h>
+#include <time.h>
 
 std::string Card::printCard() {
 	std::string result;
@@ -44,6 +44,24 @@ std::string Card::printCard() {
 	return result;
 }
 
-void Homework02_Run() {
-
+void shuffle(Card* array, int length) {
+	for (int index = length - 1; index > 0; index--) {
+		int swapTargetIndex = rand() % (index + 1);
+		std::swap(array[index], array[swapTargetIndex]);
+	}
 }
+
+void Homework02_Run() {
+	srand(time(0));
+	printf("<< HOMEWORK 02 >>\n\n");
+	printf("< 블랙잭 게임 >\n\n");
+	Card cardList[52];
+	for (int i = 0; i < 52; i++) {
+		cardList[i] = Card(i);
+	}
+	shuffle(cardList, 52);
+
+	printf("< 플레이어의 턴 >\n\n");
+	Card playerCardList[52];
+}
+

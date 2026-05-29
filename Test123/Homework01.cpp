@@ -79,7 +79,7 @@ std::string day2dayName(int day) {
 
 void Homework01_Run() {
     printf("<< HOMEWORK 01 >>\n\n");
-    printf("< 요일을 계산할 날짜의 연, 월, 일을 공백을 사이에 두고 입력하세요.>\n");
+    printf("< 요일을 계산할 날짜의 연, 월, 일을 공백을 사이에 두고 입력하세요. >\n");
     printf("입력 : ");
     int year = 0, month = 0, day = 0;
     std::cin >> year >> month >> day;
